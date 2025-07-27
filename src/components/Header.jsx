@@ -129,7 +129,7 @@ export default function Header() {
             About
           </Link>
           <Link
-            href="/services"
+            href="/our-services"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-blue-400"
           >

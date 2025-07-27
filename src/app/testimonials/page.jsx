@@ -26,16 +26,21 @@ export default function TestimonialsPage() {
           />
         ))}
       </div>
-      <div className="mt-10 min-w-4xl flex justify-center items-center">
-        <Link href="https://forms.gle/EYpLWRQ4Dgk8nQPM7" target="_blank">
+      <div className="mt-10 w-[80%] sm:w-[40%] flex flex-row justify-center items-center gap-0 overflow-hidden">
+        <Link
+          href="https://forms.gle/EYpLWRQ4Dgk8nQPM7"
+          target="_blank"
+          className="flex-1 min-w-0"
+        >
           <input
             type="text"
-            placeholder="Post Your Experiences.. "
-            className="border px-3 py-3 rounded-l-lg border-blue-500 outline-none w-80"
+            placeholder="Post Your Experiences..."
+            className="border px-3 py-3 rounded-l-lg border-blue-500 outline-none w-full text-sm"
+            readOnly
           />
         </Link>
         <Link href="https://forms.gle/EYpLWRQ4Dgk8nQPM7" target="_blank">
-          <button className="text-base text-white bg-blue-600 rounded-r-lg px-3 py-3 cursor-pointer hover:bg-blue-700">
+          <button className="text-sm text-white bg-blue-600 rounded-r-lg px-4 py-3 hover:bg-blue-700 whitespace-nowrap">
             Share Now
           </button>
         </Link>
