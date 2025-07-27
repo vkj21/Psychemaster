@@ -45,14 +45,14 @@ export default function SocialSection() {
         <div className="bg-black rounded-xl p-6 shadow-sm">
           <div className="flex items-center space-x-3 mb-2">
             <MessageCircle className="text-blue-400" />
-            <h3 className="text-xl font-semibold">WhatsApp</h3>
+            <h3 className="text-xl font-semibold">Email</h3>
           </div>
-          <p className="text-gray-300 mb-2">Join whatsApp community</p>
+          <p className="text-gray-300 mb-2">Send your queries</p>
           <Link
-            href="mailto:contact@psychemaster.com"
+            href="mailto:psychemasterindia@gmail.com"
             className="text-blue-500 hover:text-blue-600 text-sm"
           >
-            Join community →
+            Email Now →
           </Link>
         </div>
       </div>

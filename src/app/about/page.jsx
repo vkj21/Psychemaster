@@ -6,6 +6,18 @@ export default function page() {
   return (
     <div className="bg-black text-white py-20 px-4 md:px-8">
       <div className="mx-auto grid md:grid-cols-2 gap-12 items-center py-10 px-4 md:px-8">
+        <div className="relative">
+          <div className="flex justify-center items-center">
+            <Image
+              src="/images/psyche-master.png"
+              width={300}
+              height={300}
+              alt="psychemaster-logo"
+              className=""
+            />
+          </div>
+          <div className="absolute inset-0 rounded-xl animate-pulse bg-gradient-to-r from-purple-800 via-blue-950 to-purple-800 opacity-20 blur-2xl z-0" />
+        </div>
         <div className="flex flex-col gap-6">
           <p className="text-lg font-normal text-gray-100">
             At{" "}
@@ -26,15 +38,6 @@ export default function page() {
             needs of each client, offering guidance and support every step of
             the way.
           </p>
-        </div>
-        <div className="flex justify-center items-center">
-          <Image
-            src="/images/psyche-master.png"
-            width={300}
-            height={300}
-            alt="psychemaster-logo"
-            className=""
-          />
         </div>
       </div>
       <WhoWeAre />

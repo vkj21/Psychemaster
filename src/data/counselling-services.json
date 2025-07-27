@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Individual Counseling",
+    "description": "Personalized one-on-one sessions for individuals facing emotional, psychological, or behavioral challenges. We offer a confidential and supportive space to explore thoughts, feelings, and personal concerns, promoting healing, clarity, and self-growth for improved mental well-being and overall life satisfaction.",
+    "icon": "UserCircle"
+  },
+  {
+    "title": "Group Counseling",
+    "description": "Group sessions bring together individuals with similar concerns to share experiences, build support, and learn coping strategies. Led by professional counselors, these sessions foster connection, reduce isolation, and enhance emotional resilience through guided discussions and peer encouragement.",
+    "icon": "UsersRound"
+  },
+  {
+    "title": "Workshops & Webinars",
+    "description": "Interactive sessions covering stress management, exam anxiety, mental well-being, teacher wellness, and parent training. These programs raise awareness, teach practical tools, and promote emotional health in educational and personal settings, empowering students, educators, and families to thrive emotionally and academically.",
+    "icon": "Presentation"
+  },
+  {
+    "title": "Internship & Research Opportunities",
+    "description": "Internship programs offer hands-on experience in psychological services, enhancing learning through real-world exposure. Students can also participate in guided research projects, contributing to mental health knowledge and building strong academic and professional foundations in the field of psychology.",
+    "icon": "GraduationCap"
+  }
+]

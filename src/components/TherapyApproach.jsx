@@ -5,23 +5,44 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "How can I reset my password?",
+    question: "How can I book a session?",
     answer:
-      "To reset your password, go to settings and click on 'Reset Password'.",
+      "Booking with us is simple and friendly! You can book your session anytime through our online system or just reach out by phone or email—we’re here to help you every step of the way.",
   },
   {
-    question: "How do I update my billing information?",
+    question: "Can I reschedule my session?",
     answer:
-      "You can update billing information from your profile settings under 'Billing'.",
+      "We understand life happens! Just send us an email at least 24 hours before your appointment, and we’ll happily help you reschedule to a time that works better for you.",
   },
   {
-    question: "How can I contact customer support?",
+    question: "What languages do you offer services in?",
     answer:
-      "Reach out via the Contact page or email us directly at support@example.com.",
+      "To make you feel comfortable and understood, we offer our counseling and training services in English, Hindi, and Magahi.",
   },
   {
-    question: "How do I delete my account?",
-    answer: "Please contact support to request account deletion.",
+    question: "Do you offer any free services?",
+    answer:
+      "Yes! We proudly offer free workshops and personal training sessions specifically for students and epilepsy warriors, because everyone deserves support and care.",
+  },
+  {
+    question: "What types of counseling services do you provide?",
+    answer:
+      "We offer individual and group counseling, epilepsy-focused support, caregiver and family training, and interactive workshops and webinars tailored just for you.",
+  },
+  {
+    question: "Is my information kept confidential?",
+    answer:
+      "Your privacy means everything to us. All sessions and communications are fully confidential, so you can share openly and safely.",
+  },
+  {
+    question: "How can I learn more about your training programs?",
+    answer:
+      "We’d love to tell you more! Reach out anytime by phone or email, and we’ll gladly guide you through the options that best fit your needs.",
+  },
+  {
+    question: "Do you offer services for schools and students?",
+    answer:
+      "Absolutely! We provide workshops, webinars, and internship opportunities focused on student well-being, stress management, and mental health education.",
   },
 ];
 
@@ -47,23 +68,29 @@ export default function TherapyApproach() {
           <div className="space-y-6">
             {[
               {
-                title: "Understanding and Support",
-                desc: "We understand that living with epilepsy can often bring emotional, social, and psychological hurdles, not just for the individual but also for their families and caregivers.",
+                title: "Counseling Services",
+                desc: "We believe in meeting you where you are. Using a person-centered and eclectic approach, we tailor therapies like Cognitive Behavioral Therapy (CBT), Rational Emotive Behavior Therapy (REBT), and Narrative Therapy to your unique story. Our goal is to guide you gently toward healing, self-understanding, and lasting change.",
+              },
+              {
+                title: "Training",
+                desc: "Understanding that every home and family is different, we offer individualized, home-based training for epilepsy patients, their loved ones, and caregivers. We walk alongside you, providing practical skills and compassionate support designed to make daily life smoother and more empowered.",
               },
               {
                 title: "Comprehensive Care",
-                desc: "From dealing with anxiety and stress to addressing feelings of isolation or stigma, our tailored counseling services are designed to provide compassionate support every step of the way.",
+                desc: "Our holistic approach blends psychological and social models to support stress management and well-being, especially for students. We use child-friendly techniques—both directive and non-directive—to create a nurturing space where growth and balance can flourish.",
               },
               {
-                title: "Our Core Belief",
-                desc: "At our core, we believe that no one should face these challenges alone. Let's work together to nurture mental and emotional strength, one step at a time.",
+                title: "Our Belief",
+                desc: "At our core, we believe that everyone holds incredible inner strength. Our role is to help you awaken and activate this power with thoughtful, personalized strategies — so you can face challenges with confidence and hope.",
               },
             ].map((item, index) => (
               <div
                 key={index}
                 className="bg-[#1a1a1a] p-6 rounded-xl shadow hover:shadow-blue-600/40 transition"
               >
-                <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
+                <h4 className="font-semibold text-lg mb-2 text-blue-500">
+                  {item.title}
+                </h4>
                 <p className="text-gray-300 text-sm">{item.desc}</p>
               </div>
             ))}
@@ -72,7 +99,7 @@ export default function TherapyApproach() {
           {/* RIGHT: FAQ Accordion */}
           <div className="bg-[#1a1a1a] rounded-xl p-6 shadow">
             <h4 className="font-semibold text-xl mb-6">
-              Commonly Asked Queries
+              Your Concerns, Our Care
             </h4>
             <div className="space-y-4">
               {faqs.map((faq, index) => (

@@ -8,22 +8,38 @@ export default function WhoWeAre() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* LEFT COLUMN */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">WHO ARE WE</h2>
-          <h3 className="text-xl md:text-2xl text-blue-500 font-semibold mb-6">
-            We are a Team of Certified Counselors Working around Epilepsy
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">WHO WE ARE</h2>
+          <h3 className="text-sm md:text-sm text-blue-500 font-semibold mb-6">
+            We’re more than just a team — we’re people who deeply care. We’ve
+            seen the weight that epilepsy, emotional struggles, stress, and
+            mental health challenges can place on individuals and families. And
+            that’s exactly why we’re here: to walk beside you, with empathy,
+            understanding, and unwavering support.
           </h3>
           <p className="text-gray-300 mb-4">
-            We understand that living with epilepsy can often bring emotional,
-            social, and psychological hurdles, not just for the individual but
-            also for their families and caregivers. From dealing with anxiety
-            and stress to addressing feelings of isolation or stigma, our
-            tailored counseling services are designed to provide compassionate
-            support every step of the way.
+            Whether you’re someone living with epilepsy, feeling lost in your
+            own thoughts, overwhelmed by studies, or simply in need of a safe
+            space to be heard — you are not alone. We offer personalized
+            counseling, heartfelt conversations, empowering training for
+            caregivers and families, and emotional guidance for students,
+            parents, and teachers alike.
           </p>
-          <p className="text-gray-300">
-            At our core, we believe that no one should face these challenges
-            alone. Let's work together to nurture mental and emotional strength,
-            one step at a time.
+          <p className="text-gray-300 mb-4">
+            Our workshops and webinars are created with love and intention — to
+            help you manage stress, reconnect with yourself, and build a more
+            peaceful, balanced life. For students stepping into the mental
+            health field, our internships and research opportunities offer not
+            just learning, but mentorship and purpose.
+          </p>
+          <p className="text-gray-300 mb-4">
+            Every person we work with has a story — and we honor each one.
+            Because for us, it’s not just about solving problems. It’s about
+            helping you feel seen, supported, and strong enough to take your
+            next step — whatever that may be.
+          </p>
+          <p className="text-gray-300 mb-4">
+            In this space, you’ll find care, connection, and the belief that
+            healing is possible — for everyone.
           </p>
         </div>
 
@@ -32,32 +48,52 @@ export default function WhoWeAre() {
           <div className="bg-black border border-gray-800 rounded-xl p-6 shadow-lg relative z-10">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <CheckCircle className="text-blue-500 mt-1" size={24} />
+                <div className="">
+                  <CheckCircle
+                    className="text-blue-500 mt-1 text-start"
+                    size={24}
+                  />
+                </div>
                 <div>
-                  <h4 className="font-semibold text-lg">Certified Experts</h4>
+                  <h4 className="font-semibold text-lg">
+                    Experienced & Certified Professionals
+                  </h4>
                   <p className="text-gray-400 text-sm">
-                    Our team consists of certified and experienced counselors
-                    specialized in epilepsy care.
+                    Our team is made up of certified counselors, mental health
+                    professionals, and psychologists with extensive experience,
+                    especially in epilepsy care. We follow the highest ethical
+                    standards in counseling to provide respectful, trustworthy,
+                    and compassionate support tailored to your unique needs.
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <Lock className="text-blue-500 mt-1" size={24} />
+                <div className="">
+                  <Lock className="text-blue-500 mt-1" size={24} />
+                </div>
                 <div>
                   <h4 className="font-semibold text-lg">Secure & Private</h4>
                   <p className="text-gray-400 text-sm">
-                    Your privacy is our priority. All sessions are completely
-                    confidential.
+                    Your privacy is our utmost priority. All sessions are held
+                    in a completely confidential and secure environment,
+                    ensuring you feel safe and comfortable throughout your
+                    journey with us.
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <CalendarClock className="text-blue-500 mt-1" size={24} />
+                <div className="">
+                  <CalendarClock className="text-blue-500 mt-1" size={24} />
+                </div>
                 <div>
-                  <h4 className="font-semibold text-lg">Flexible Scheduling</h4>
+                  <h4 className="font-semibold text-base">
+                    Flexible Scheduling
+                  </h4>
                   <p className="text-gray-400 text-sm">
-                    Book sessions at your convenience with our easy online
-                    scheduling system.
+                    We understand the delicate balance between work, family, and
+                    self-care. That’s why we offer flexible appointment times
+                    and an easy online booking system, allowing you to schedule
+                    sessions that fit seamlessly into your busy life.
                   </p>
                 </div>
               </div>
@@ -70,22 +106,6 @@ export default function WhoWeAre() {
       </div>
 
       {/* STATS */}
-      <div className="max-w-7xl mx-auto mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-        {[
-          { value: "100+", label: "Clients Helped" },
-          { value: "10+", label: "Expert Counselors" },
-          { value: "95%", label: "Success Rate" },
-          { value: "24/7", label: "Support" },
-        ].map((stat, index) => (
-          <div
-            key={index}
-            className="bg-[#1a1a1a] p-6 rounded-xl shadow hover:shadow-blue-500/20 hover:-translate-y-1 transition-all"
-          >
-            <h3 className="text-2xl font-bold text-blue-500">{stat.value}</h3>
-            <p className="text-gray-300 text-sm mt-2">{stat.label}</p>
-          </div>
-        ))}
-      </div>
     </section>
   );
 }

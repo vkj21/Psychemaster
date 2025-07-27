@@ -1,57 +1,48 @@
-// import WhatWeDo from "@/components/WhatWeDo";
-// import React from "react";
+import epilepsyServices from "@/data/epilepsy-counselling.json";
+import counsellingServices from "@/data/counselling-services.json";
+import ServiceCard from "@/components/ServiceCard";
 
-// export default function page() {
-//   return (
-//     <div>
-//       <WhatWeDo />
-//     </div>
-//   );
-// }
-
-import ServiceModalClient from "@/components/ServiceModalClient";
-import React from "react";
-// import DynamicModal from "./ServiceModalClient"; // client-side modal logic
-
-const services = [
-  {
-    title: "Individual Counseling",
-    short:
-      "One to One session over your Personal challenges with Epilepsy condition",
-    long: "Our individual counseling sessions are tailored to help you manage the psychological effects of epilepsy...",
-    icon: "🧠",
-  },
-  {
-    title: "Epilepsy Warriors Training",
-    short: "Personalized training for Epilepsy patient",
-    long: "A training module designed for those living with epilepsy...",
-    icon: "🛡️",
-  },
-  {
-    title: "Epilepsy Caregivers Training",
-    short: "Personalized training for Epilepsy caregivers",
-    long: "Helping caregivers understand epilepsy and support patients with empathy...",
-    icon: "👥",
-  },
-  {
-    title: "Family Training",
-    short:
-      "Personalized family training program for Epilepsy warriors and their loved ones",
-    long: "Strengthening family bonds through guidance and counseling...",
-    icon: "🏠",
-  },
-];
-
-export default function page() {
+export default function OurServicesPage() {
   return (
-    <div className="bg-[#111] text-white py-20 px-6">
-      <h2 className="text-3xl font-bold text-center">WHAT WE DO</h2>
-      <p className="text-center text-gray-400 mt-2 mb-10">
-        Our Psychological Support
-      </p>
+    <div className="min-h-screen px-6 py-20 bg-gradient-to-tr from bg-purple-950 via-black to-purple-950 text-white">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center">
+          Our Services
+        </h1>
+        <p className="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-12">
+          At PsycheMaster, we offer compassionate, tailored support for those
+          living with epilepsy and those seeking mental wellness. Explore our
+          specialized services below.
+        </p>
 
-      {/* Grid + Modal Logic in Client Component */}
-      <ServiceModalClient services={services} />
+        {/* Epilepsy Services */}
+        <h2 className="text-2xl font-semibold mb-6">
+          Special Care Programs for Epilepsy Support
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {epilepsyServices.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              iconName={service.icon}
+            />
+          ))}
+        </div>
+
+        {/* Counseling Services */}
+        <h2 className="text-2xl font-semibold mb-6">Counseling Services</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {counsellingServices.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              iconName={service.icon}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

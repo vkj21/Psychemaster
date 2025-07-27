@@ -3,25 +3,7 @@
 import { useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const testimonials = [
-  {
-    quote: "These cards are amazing...",
-    name: "Manu Sharma",
-    role: "Senior Software Engineer",
-  },
-  {
-    quote:
-      "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for. ",
-    name: "Ayesha Khan",
-    role: "UX Designer",
-  },
-  {
-    quote: "Really slick UI. Easy to implement.",
-    name: "Rahul Mehta",
-    role: "Frontend Developer",
-  },
-];
+import testimonials from "@/data/testimonials.json";
 
 export default function TestimonialsSection() {
   const [index, setIndex] = useState(0);

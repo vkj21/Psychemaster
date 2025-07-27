@@ -9,6 +9,7 @@ import {
   Linkedin,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -19,25 +20,14 @@ export default function Footer() {
           <div className=" flex flex-col gap-2 items-center justify-center">
             <Image
               src="/images/psyche-master.png"
-              width={110}
-              height={110}
+              width={140}
+              height={140}
               alt="psychemaster-logo"
-              className="rounded-full border-2 border-white"
+              className="rounded-full "
             />
             <p className="text-sm font-bold mb-4">
               Mindful Living | Flourishing Together
             </p>
-            <div className="flex space-x-4 mt-2">
-              <a href="#" aria-label="Mail">
-                <Mail className="hover:text-white" />
-              </a>
-              <a href="#" aria-label="Instagram">
-                <Instagram className="hover:text-white" />
-              </a>
-              <a href="#" aria-label="Linkedin">
-                <Linkedin className="hover:text-white" />
-              </a>
-            </div>
           </div>
         </div>
 
@@ -46,34 +36,30 @@ export default function Footer() {
           <h3 className="text-white font-semibold text-lg mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="/" className="hover:underline">
+              <Link href="/" className="hover:text-gray-100">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="hover:underline">
+              <Link href="/about" className="hover:text-gray-100">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/our-services" className="hover:underline">
+              <Link href="/our-services" className="hover:text-gray-100">
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/testimonials" className="hover:underline">
+              <Link href="/testimonials" className="hover:text-gray-100">
                 Testimonials
-              </a>
+              </Link>
             </li>
+
             <li>
-              <a href="/contact" className="hover:underline">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="/privacy-policy" className="hover:underline">
+              <Link href="/privacy-policy" className="hover:text-gray-100">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -87,7 +73,8 @@ export default function Footer() {
             <li>Individual Counseling</li>
             <li>Epilepsy Warriors Training</li>
             <li>Caregivers Training</li>
-            <li>Family Training</li>
+            <li>Internship & Research Oppotunities</li>
+            <li>Workshop & Webinars</li>
           </ul>
         </div>
 
@@ -96,13 +83,29 @@ export default function Footer() {
           <h3 className="text-white font-semibold text-lg mb-3">
             Contact Info
           </h3>
-          <div className="flex items-start space-x-2 mb-2">
-            <Mail className="text-blue-500 mt-1" />
-            <p>contact@psychemaster.com</p>
+          <div className="flex items-center space-x-2 mb-2">
+            <Mail size={28} className="text-blue-500 mt-1" />
+            <Link href="mailto:psychemasterindia@gmail.com">
+              psychemastersindia@gmail.com
+            </Link>
           </div>
-          <div className="flex items-start space-x-2">
-            <Phone className="text-blue-500 mt-1" />
-            <p>+91 567-8900</p>
+          <div className="flex items-center space-x-2 mb-2">
+            <Instagram className="text-blue-500 mt-1" />
+            <Link
+              href="https://instagram.com/psychemasterindia"
+              target="_blank"
+            >
+              Instagram
+            </Link>
+          </div>
+          <div className="flex items-center space-x-2 mb-2">
+            <Linkedin className="text-blue-500 mt-1" />
+            <Link
+              href="https://linkedin.com/company/paychemasterindia"
+              target="_blank"
+            >
+              Linkedin
+            </Link>
           </div>
         </div>
       </div>

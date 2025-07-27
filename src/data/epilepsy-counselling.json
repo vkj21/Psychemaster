@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Individual Counseling",
+    "description": "One-on-one counseling sessions tailored to help individuals navigate personal challenges related to epilepsy. We provide a safe, supportive environment to explore emotional and mental health concerns, build resilience, and enhance overall quality of life.",
+    "icon": "UserCircle"
+  },
+  {
+    "title": "Epilepsy Warriors Training",
+    "description": "A customized training program designed to empower individuals living with epilepsy. Through tailored education and practical strategies, participants gain confidence, improve self-management skills, and lead more independent lives.",
+    "icon": "ShieldCheck"
+  },
+  {
+    "title": "Epilepsy Caregivers Training",
+    "description": "This specialized training supports caregivers with the tools and knowledge needed to care for someone with epilepsy. It focuses on practical caregiving skills, emergency response, emotional resilience, and enhancing the well-being of both caregiver and patient.",
+    "icon": "HandsHelping"
+  },
+  {
+    "title": "Family Training",
+    "description": "A personalized program for families of epilepsy warriors, aimed at strengthening understanding and support within the household. It helps loved ones communicate more effectively, manage shared challenges, and create a more compassionate home environment.",
+    "icon": "Users"
+  }
+]
