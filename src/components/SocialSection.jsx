@@ -1,6 +1,6 @@
 "use client";
 
-import { Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { Copy, Instagram, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 
 export default function SocialSection() {
@@ -14,46 +14,62 @@ export default function SocialSection() {
             <h3 className="text-xl font-semibold">Instagram</h3>
           </div>
           <p className="text-gray-300 mb-2">Follow us for updates</p>
-          <Link
+          <a
             href="https://instagram.com/psychemasterindia"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:text-blue-600 text-sm"
           >
             Visit our profile →
-          </Link>
+          </a>
         </div>
 
-        {/* WhatsApp */}
+        {/* LinkedIn */}
         <div className="bg-black rounded-xl p-6 shadow-sm">
           <div className="flex items-center space-x-3 mb-2">
             <Linkedin className="text-blue-400" />
-            <h3 className="text-xl font-semibold">Linkedin</h3>
+            <h3 className="text-xl font-semibold">LinkedIn</h3>
           </div>
           <p className="text-gray-300 mb-2">Follow us on</p>
-          <Link
+          <a
             href="https://www.linkedin.com/company/paychemasterindia/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500  hover:text-blue-600 text-sm"
+            className="text-blue-500 hover:text-blue-600 text-sm"
           >
-            Send message →
-          </Link>
+            Connect with us →
+          </a>
         </div>
 
-        {/* WhatsApp Channel */}
+        {/* Email */}
         <div className="bg-black rounded-xl p-6 shadow-sm">
           <div className="flex items-center space-x-3 mb-2">
-            <MessageCircle className="text-blue-400" />
+            <Mail className="text-blue-400" />
             <h3 className="text-xl font-semibold">Email</h3>
           </div>
           <p className="text-gray-300 mb-2">Send your queries</p>
-          <Link
-            href="mailto:psychemasterindia@gmail.com"
-            className="text-blue-500 hover:text-blue-600 text-sm"
-          >
-            Email Now →
-          </Link>
+          <div className="flex justify-between">
+            <Link
+              href="mailto:psychemasterindia@gmail.com"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-600 text-sm"
+            >
+              Email Now →
+            </Link>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText("psychemasterindia@gmail.com");
+                alert("Email copied to clipboard!");
+              }}
+              className="hidden sm:flex gap-1 text-blue-500 hover:text-blue-600 text-sm cursor-pointer"
+            >
+              Copy Email{" "}
+              <span>
+                {" "}
+                <Copy size={16} />
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
