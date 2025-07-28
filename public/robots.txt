@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://psychemasterindia.org/
+
+# Sitemaps
+Sitemap: https://psychemasterindia.org/sitemap.xml

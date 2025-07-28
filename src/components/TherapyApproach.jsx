@@ -54,75 +54,108 @@ export default function TherapyApproach() {
   };
 
   return (
-    <section className="bg-[#111] text-white py-20 px-4 md:px-8">
+    <section
+      className="bg-[#111] text-white py-20 px-4 md:px-8"
+      aria-labelledby="therapy-heading"
+    >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-3xl md:text-4xl font-bold mb-2">
-          OUR APPROACH TO THERAPY
-        </h2>
-        <p className="text-center text-gray-400 mb-12">
-          Meet our specialist counselors
-        </p>
+        <header className="text-center mb-12">
+          <h2
+            id="therapy-heading"
+            className="text-3xl md:text-4xl font-bold mb-2"
+          >
+            Our Approach to Therapy
+          </h2>
+          <p className="text-gray-400">Meet our specialist counselors</p>
+        </header>
 
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          {/* LEFT: Approach Boxes */}
-          <div className="space-y-6">
+          {/* LEFT: Approach Info */}
+          <div className="space-y-6" aria-label="Therapeutic Approaches">
             {[
               {
                 title: "Counseling Services",
-                desc: "We believe in meeting you where you are. Using a person-centered and eclectic approach, we tailor therapies like Cognitive Behavioral Therapy (CBT), Rational Emotive Behavior Therapy (REBT), and Narrative Therapy to your unique story. Our goal is to guide you gently toward healing, self-understanding, and lasting change.",
+                desc: "We believe in meeting you where you are. Using a person-centered and eclectic approach, we tailor therapies like CBT, REBT, and Narrative Therapy to your unique story.",
               },
               {
                 title: "Training",
-                desc: "Understanding that every home and family is different, we offer individualized, home-based training for epilepsy patients, their loved ones, and caregivers. We walk alongside you, providing practical skills and compassionate support designed to make daily life smoother and more empowered.",
+                desc: "We offer individualized, home-based training for epilepsy patients, their caregivers, and families. We provide practical skills and support to improve daily living.",
               },
               {
                 title: "Comprehensive Care",
-                desc: "Our holistic approach blends psychological and social models to support stress management and well-being, especially for students. We use child-friendly techniques—both directive and non-directive—to create a nurturing space where growth and balance can flourish.",
+                desc: "Our holistic approach blends psychological and social models. For students, we use directive and non-directive child-friendly methods to foster healthy growth.",
               },
               {
                 title: "Our Belief",
-                desc: "At our core, we believe that everyone holds incredible inner strength. Our role is to help you awaken and activate this power with thoughtful, personalized strategies — so you can face challenges with confidence and hope.",
+                desc: "We believe everyone has incredible inner strength. Our role is to help you unlock it with thoughtful strategies — so you can face challenges confidently.",
               },
             ].map((item, index) => (
-              <div
+              <article
                 key={index}
                 className="bg-[#1a1a1a] p-6 rounded-xl shadow hover:shadow-blue-600/40 transition"
+                aria-labelledby={`approach-title-${index}`}
               >
-                <h4 className="font-semibold text-lg mb-2 text-blue-500">
+                <h3
+                  id={`approach-title-${index}`}
+                  className="font-semibold text-lg mb-2 text-blue-500"
+                >
                   {item.title}
-                </h4>
+                </h3>
                 <p className="text-gray-300 text-sm">{item.desc}</p>
-              </div>
+              </article>
             ))}
           </div>
 
-          {/* RIGHT: FAQ Accordion */}
-          <div className="bg-[#1a1a1a] rounded-xl p-6 shadow">
-            <h4 className="font-semibold text-xl mb-6">
+          {/* RIGHT: FAQ Section */}
+          <section
+            className="bg-[#1a1a1a] rounded-xl p-6 shadow"
+            aria-labelledby="faq-heading"
+          >
+            <h3 id="faq-heading" className="font-semibold text-xl mb-6">
               Your Concerns, Our Care
-            </h4>
+            </h3>
             <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div key={index} className="border-b border-gray-700 pb-4">
-                  <button
-                    onClick={() => toggleFAQ(index)}
-                    className="w-full flex justify-between items-center text-left text-sm font-medium text-white focus:outline-none"
+              {faqs.map((faq, index) => {
+                const isOpen = openIndex === index;
+                const questionId = `faq-question-${index}`;
+                const answerId = `faq-answer-${index}`;
+
+                return (
+                  <article
+                    key={index}
+                    className="border-b border-gray-700 pb-4"
                   >
-                    {faq.question}
-                    <ChevronDown
-                      className={`transition-transform ${
-                        openIndex === index ? "rotate-180" : ""
-                      }`}
-                      size={18}
-                    />
-                  </button>
-                  {openIndex === index && (
-                    <p className="text-gray-400 mt-2 text-sm">{faq.answer}</p>
-                  )}
-                </div>
-              ))}
+                    <button
+                      className="w-full flex justify-between items-center text-left text-sm font-medium text-white focus:outline-none"
+                      onClick={() => toggleFAQ(index)}
+                      aria-expanded={isOpen}
+                      aria-controls={answerId}
+                      id={questionId}
+                    >
+                      {faq.question}
+                      <ChevronDown
+                        className={`transition-transform ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                        size={18}
+                        aria-hidden="true"
+                      />
+                    </button>
+                    {isOpen && (
+                      <p
+                        id={answerId}
+                        className="text-gray-400 mt-2 text-sm"
+                        role="region"
+                        aria-labelledby={questionId}
+                      >
+                        {faq.answer}
+                      </p>
+                    )}
+                  </article>
+                );
+              })}
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </section>
